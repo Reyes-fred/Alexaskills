@@ -1,0 +1,5 @@
+QuestionIntent
+QuestionTypeIntent
+NumberOfQuestionIntent
+TipsIntent
+CompanyIntent

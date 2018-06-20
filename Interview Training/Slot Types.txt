@@ -1,0 +1,15 @@
+Company Name
+    intel
+    bosch
+    amazon
+    microsoft
+    google
+    
+QuestionType
+    personal
+    career
+    behavioral
+    salary
+    technical
+    general
+    
