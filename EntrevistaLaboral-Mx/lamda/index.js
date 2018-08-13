@@ -122,7 +122,7 @@ var questions = [
     { value : "¿Cómo implementarías un ordenamiento de tipo selección?", tags : ["tecnico", "amazon", "google", "microsoft", "intel", "bosch"] },
     { value : "¿Cómo implementarías un ordenamiento por inserción?", tags : ["tecnico", "amazon", "google", "microsoft", "intel", "bosch"] },
     { value : "¿Cómo implementarías un merg sort?", tags : ["tecnico", "amazon", "google", "microsoft", "intel", "bosch"] },
-    { value : "Cómo impolementarías un quick sort", tags : ["tecnico", "amazon", "google", "microsoft", "intel", "bosch"] },
+    { value : "Cómo implementarías un quick sort", tags : ["tecnico", "amazon", "google", "microsoft", "intel", "bosch"] },
     { value : "Tiene dos números muy grandes que no se pueden almacenar en ningún tipo de datos disponibles. ¿Cómo los multiplicarías?", tags : ["tecnico", "amazon", "google", "microsoft", "intel", "bosch"] },
     { value : "¿Cómo implementarás un diccionario?", tags : ["tecnico", "amazon", "google", "microsoft", "intel", "bosch"] },
     { value : "Dada una matriz que está clasificada en espiral. Elimine un elemento e inserte otro elemento, manteniendo el orden ordenado.", tags : ["tecnico", "amazon", "google", "microsoft", "intel", "bosch"] },
@@ -145,22 +145,22 @@ var questions = [
     { value : "¿Cuál es la mejor parte de tu trabajo actual?", tags : ["personal", "carrera"] },
     { value : "En particular, ¿en qué estás más interesado en trabajar?", tags : ["personal", "carrera"] },
     { value : "¿Tienes ejemplos de tu trabajo?", tags : ["personal", "tecnico", "carrera"] },
-    { value : "Explicar el concepto de polimorfismo en la programación orientada a objetos", tags : ["tecnico","google","amazon","bosch","microsoft"] },
+    { value : "Explicar el concepto de polimorfismo en la programación orientada a objetos", tags : ["tecnico"] },
     { value : "¿Cuáles son 3 cosas que quieres que recuerde de ti?", tags : ["tecnico","google","amazon","bosch","microsoft"] },
-    { value : "Comparta un momento en que le dieron un problema que no pudo resolver.", tags : ["tecnico","google","amazon","bosch","microsoft"]},
-    { value : "Dime cómo implementar la secuencia de Fibonacci", tags : ["tecnico","google","amazon","bosch","microsoft"] },
-    { value : "¿Cómo se implementa una búsqueda binaria?", tags : ["tecnico","google","amazon","bosch","microsoft"] },
-    { value : "¿Cómo se puede encontrar la profundidad mínima de un árbol binario?", tags : ["tecnico","google","amazon","bosch","microsoft"] },
-    { value : "¿Cómo se puede comprobar si un árbol binario es o no un árbol binario completo?", tags : ["tecnico","google","amazon","bosch","microsoft"] },
-    { value : "¿Cómo se comprueba si un árbol binario es un árbol secundario de otro árbol binario?", tags : ["tecnico","google","amazon","bosch","microsoft"]},
-    { value : "¿Cómo compararía dos cadenas representadas como listas enlazadas?", tags : ["tecnico","google","amazon","bosch","microsoft"] },
-    { value : "¿Cómo detectaría y eliminaría los bucles en una lista vinculada?", tags : ["tecnico","google","amazon","bosch","microsoft"]},
-    { value : "¿Cómo invertirías todos los elementos en una lista vinculada?", tags : ["tecnico","google","amazon","bosch","microsoft"] },
-    { value : "¿Cómo encuentras si un número es un cuadrado perfecto?", tags : ["tecnico","google","amazon","bosch","microsoft"] },
-    { value : "¿Cuál es el patrón de diseño singleton?", tags : ["tecnico","google","amazon","bosch","microsoft"] },
-    { value : "¿Cuál es el patrón de diseño de fábrica?", tags : ["tecnico","google","amazon","bosch","microsoft"] },
-    { value : "¿Cómo encontrarías el máximo divisor común de un número usando la recursión?", tags : ["tecnico","google","amazon","bosch","microsoft"] },
-    { value : "¿Cómo encontrarías el factorial de un número usando la recursión?", tags : ["tecnico","google","amazon","bosch","microsoft"] }
+    { value : "Comparta un momento en que le dieron un problema que no pudo resolver.", tags : ["tecnico","comportamiento"]},
+    { value : "Dime cómo implementar la secuencia de Fibonacci", tags : ["tecnico"] },
+    { value : "¿Cómo se implementa una búsqueda binaria?", tags : ["tecnico"] },
+    { value : "¿Cómo se puede encontrar la profundidad mínima de un árbol binario?", tags : ["tecnico"] },
+    { value : "¿Cómo se puede comprobar si un árbol binario es o no un árbol binario completo?", tags : ["tecnico"] },
+    { value : "¿Cómo se comprueba si un árbol binario es un árbol secundario de otro árbol binario?", tags : ["tecnico"]},
+    { value : "¿Cómo compararía dos cadenas representadas como listas enlazadas?", tags : ["tecnico"] },
+    { value : "¿Cómo detectaría y eliminaría los bucles en una lista vinculada?", tags : ["tecnico"]},
+    { value : "¿Cómo invertirías todos los elementos en una lista vinculada?", tags : ["tecnico"]},
+    { value : "¿Cómo encuentras si un número es un cuadrado perfecto?", tags : ["tecnico"] },
+    { value : "¿Cuál es el patrón de diseño singleton?", tags :["tecnico"] },
+    { value : "¿Cuál es el patrón de diseño de fábrica?", tags : ["tecnico"] },
+    { value : "¿Cómo encontrarías el máximo divisor común de un número usando la recursión?", tags : ["tecnico"] },
+    { value : "¿Cómo encontrarías el factorial de un número usando la recursión?", tags : ["tecnico"] }
  ];
 
 // All available tips
@@ -321,7 +321,7 @@ var AMZN_APP_ID = "amzn1.ask.skill.";
 
 function getWelcomeResponse(callback) {
     var sessionAttributes = {},
-        speechOutput = "Puedes preguntar por una entrevista. Puedes pedir una pregunta de un tema especifico para una empresa especifica"
+        speechOutput = "Puedes pedir una pregunta general o Puedes pedir una pregunta de un tema especifico para una empresa especifica"
               + " si necesitas algo mas preciso",
         repromptText = "",
         shouldEndSession = false;
@@ -488,7 +488,7 @@ function handleNumberOfQuestionsRequest(intent, session, callback) {
     if(numQuestions < 1){
       speechOutput = RESPONSE_NO_QUESTIONS;
     }else if(questionType || companyName){
-      speechOutput = "I have " + numQuestions + " ";
+      speechOutput = "Tengo " + numQuestions + " ";
 
       //if type asked
       if(questionType){
