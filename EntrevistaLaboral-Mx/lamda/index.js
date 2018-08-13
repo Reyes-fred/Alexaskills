@@ -317,7 +317,7 @@ var CARD_TITLE ="Entrevista de Trabajo"; // Be sure to change this for your skil
 var RESPONSE_NO_QUESTIONS ="No tengo ninguna pregunta como esa.";
 var RESPONSE_NO_TIPS ="No tengo ningun consejo como ese.";
 var EXCLUDED_GENERAL_TAGS = ["tecnico", "amazon", "google", "microsoft", "intel", "bosch"]; // tags to be excluded from generic request
-var AMZN_APP_ID = "amzn1.ask.skill.2620fefd-1431-4a26-9dfb-4dee1071a888";
+var AMZN_APP_ID = "amzn1.ask.skill.";
 
 function getWelcomeResponse(callback) {
     var sessionAttributes = {},
