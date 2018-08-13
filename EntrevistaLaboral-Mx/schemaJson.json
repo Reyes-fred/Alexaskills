@@ -1,0 +1,288 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "entrevista laboral",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "PreguntaIntent",
+                    "slots": [
+                        {
+                            "name": "TipoPregunta",
+                            "type": "TipoPregunta"
+                        },
+                        {
+                            "name": "NombreEmpresa",
+                            "type": "NombreEmpresa"
+                        }
+                    ],
+                    "samples": [
+                        "haz una pregunta sobre {TipoPregunta} de la empresa {NombreEmpresa}",
+                        "haz una pregunta sobre {TipoPregunta} de {NombreEmpresa}",
+                        "haz una pregunta de entrevista sobre {TipoPregunta} de {NombreEmpresa}",
+                        "hazme una pregunta sobre {TipoPregunta} de la empresa {NombreEmpresa}",
+                        "hazme una pregunta sobre {TipoPregunta} de {NombreEmpresa}",
+                        "hazme una pregunta de entrevista sobre {TipoPregunta} de {NombreEmpresa}",
+                        "dime una pregunta sobre {TipoPregunta} de la empresa {NombreEmpresa}",
+                        "dime una pregunta sobre {TipoPregunta} de {NombreEmpresa}",
+                        "dime una pregunta de entrevista sobre {TipoPregunta} de {NombreEmpresa}",
+                        "dame una pregunta sobre {TipoPregunta} de la empresa {NombreEmpresa}",
+                        "dame una pregunta sobre {TipoPregunta} de {NombreEmpresa}",
+                        "dame una pregunta de entrevista sobre {TipoPregunta} de {NombreEmpresa}",
+                        "una pregunta sobre {TipoPregunta} de la empresa {NombreEmpresa}",
+                        "una pregunta de entrevista sobre {TipoPregunta} de la empresa {NombreEmpresa}",
+                        "una pregunta sobre {TipoPregunta} de {NombreEmpresa}",
+                        "una pregunta de entrevista de {TipoPregunta} de la empresa {NombreEmpresa}",
+                        "pregunta de entrevista {TipoPregunta} sobre {NombreEmpresa}",
+                        "pregunta de {TipoPregunta} de {NombreEmpresa}",
+                        "pregunta de trabajo sobre {TipoPregunta} de la empresa {NombreEmpresa}",
+                        "pregunta de {TipoPregunta} de la empresa {NombreEmpresa}",
+                        "haz una pregunta de entrevista de {NombreEmpresa}",
+                        "haz una pregunta sobre {NombreEmpresa}",
+                        "hazme una pregunta de entrevista de {NombreEmpresa}",
+                        "hazme una pregunta sobre {NombreEmpresa}",
+                        "dime una pregunta de entrevista de {NombreEmpresa}",
+                        "dime una pregunta sobre {NombreEmpresa}",
+                        "dame una pregunta de entrevista de {NombreEmpresa}",
+                        "dame una pregunta sobre {NombreEmpresa}",
+                        "una pregunta sobre {NombreEmpresa}",
+                        "una pregunta de {NombreEmpresa}",
+                        "una pregunta de entrevista sobre {NombreEmpresa}",
+                        "una pregunta de entrevista de {NombreEmpresa}",
+                        "pregunta de entrevista sobre {NombreEmpresa}",
+                        "pregunta de entrevista de {NombreEmpresa}",
+                        "pregunta sobre {NombreEmpresa}",
+                        "pregunta {NombreEmpresa}",
+                        "pregunta de {NombreEmpresa}",
+                        "realiza una pregunta sobre {TipoPregunta}",
+                        "realiza una pregunta de trabajo sobre {TipoPregunta}",
+                        "hazme una pregunta sobre {TipoPregunta}",
+                        "hazme una pregunta de trabajo sobre {TipoPregunta}",
+                        "dime una pregunta sobre {TipoPregunta}",
+                        "dime una pregunta de trabajo sobre {TipoPregunta}",
+                        "dame una pregunta sobre {TipoPregunta}",
+                        "dame una pregunta de trabajo sobre {TipoPregunta}",
+                        "una pregunta de entrevista sobre {TipoPregunta}",
+                        "una pregunta sobre {TipoPregunta}",
+                        "una pregunta de trabajo de {TipoPregunta}",
+                        "una pregunta de {TipoPregunta}",
+                        "dime una pregunta de trabajo",
+                        "preguntame",
+                        "dame una pregunta",
+                        "dame una pregunta de entrevista",
+                        "hazme una pregunta de entrevista",
+                        "hazme una pregunta",
+                        "dime una pregunta de entrevista",
+                        "dime una pregunta",
+                        "pregunta",
+                        "dame una pregunta de entrevista",
+                        "dame una pregunta",
+                        "por una pregunta de entrevista",
+                        "por una pregunta",
+                        "una pregunta"
+                    ]
+                },
+                {
+                    "name": "TipoPreguntaIntent",
+                    "slots": [],
+                    "samples": [
+                        "que tipo de preguntas tienes",
+                        "que tipo de preguntas me puedes preguntar",
+                        "que tipo de preguntas tu tienes",
+                        "que tipo de preguntas puedo preguntar",
+                        "que tipo de preguntas",
+                        "que tipo de preguntas sobre entrevistas tienes",
+                        "que tipo de preguntas sobre entrevistas me pueden preguntar",
+                        "que tipo de preguntas sobre entrevistas puedo preguntar",
+                        "tipo de preguntas sobre entrevistas",
+                        "que tipo de preguntas de entrevistas tienes ",
+                        "que clase de preguntas existen",
+                        "que clase de preguntas hay disponibles",
+                        "que clase de preguntas tienes",
+                        "que clase de preguntas de entrevistas tienes",
+                        "tipos de preguntas",
+                        "tipos de preguntas de entrevistas",
+                        "clase de preguntas",
+                        "clase de preguntas de entrevistas",
+                        "dime que clase de preguntas tienes",
+                        "dime que preguntas puedo hacer",
+                        "dime que preguntas puedo preguntar",
+                        "dime que preguntas hay disponibles",
+                        "preguntas de entrevistas disponibles",
+                        "preguntas",
+                        "empresaintento"
+                    ]
+                },
+                {
+                    "name": "NumeroDePreguntasIntent",
+                    "slots": [
+                        {
+                            "name": "TipoPregunta",
+                            "type": "TipoPregunta"
+                        },
+                        {
+                            "name": "NombreEmpresa",
+                            "type": "NombreEmpresa"
+                        }
+                    ],
+                    "samples": [
+                        "numero de preguntas sobre {TipoPregunta} existen para {NombreEmpresa}",
+                        "numero de preguntas sobre {TipoPregunta} hay para {NombreEmpresa}",
+                        "cuantas preguntas de entrevista sobre {TipoPregunta} hay disponibles para {NombreEmpresa}",
+                        "cuantas preguntas de entrevista sobre {TipoPregunta} existen para {NombreEmpresa}",
+                        "cuantas preguntas de entrevista sobre {TipoPregunta} tienes para {NombreEmpresa}",
+                        "cuantas preguntas de tipo {TipoPregunta} existen para la empresa {NombreEmpresa}",
+                        "cuantas preguntas de tipo {TipoPregunta} hay disponibles de la empresa {NombreEmpresa}",
+                        "cuantas preguntas de tipo {TipoPregunta} hay disponibles para {NombreEmpresa}",
+                        "cuantas preguntas de tipo {TipoPregunta} tienes para la empresa {NombreEmpresa} existen",
+                        "cuantas preguntas de tipo {TipoPregunta} tienes para la empresa {NombreEmpresa} tienes",
+                        "cuantas preguntas de tipo {TipoPregunta} tienes para {NombreEmpresa}",
+                        "cuantas preguntas de tipo {TipoPregunta} tienes para la empresa {NombreEmpresa}",
+                        "para la empresa {NombreEmpresa} cuantas preguntas sobre {TipoPregunta} existen",
+                        "numero de preguntas de tipo {TipoPregunta}",
+                        "numero de preguntas sobre {TipoPregunta}",
+                        "cuantas preguntas de entrevista sobre {TipoPregunta} existen",
+                        "cuantas preguntas de entrevista sobre {TipoPregunta} hay disponibles",
+                        "cuantas preguntas de entrevista sobre {TipoPregunta} tienes",
+                        "cuantas preguntas de tipo {TipoPregunta} tienes",
+                        "cuantas preguntas de tipo {TipoPregunta} hay disponibles",
+                        "cuantas preguntas de tipo {TipoPregunta}",
+                        "cuantas preguntas de entrevistas tienes",
+                        "numero de preguntas",
+                        "cuantas preguntas de entrevistas estan disponibles",
+                        "cuantas preguntas de entrevistas tienes",
+                        "cuantas preguntas tienes",
+                        "cuantas preguntas estan disponibles",
+                        "cuantas preguntas"
+                    ]
+                },
+                {
+                    "name": "ConsejoIntent",
+                    "slots": [],
+                    "samples": [
+                        "consejo para la entrevista",
+                        "consejo",
+                        "consejos de entrevistas",
+                        "consejo de entrevista",
+                        "un consejo para entrevista",
+                        "un consejo",
+                        "dime un consejo para la entrevista",
+                        "dime un consejo",
+                        "dame un consejo para la entrevista",
+                        "dame un consejo sobre entrevistas",
+                        "consigue un consejo para entrevistas",
+                        "consigueme un consejo",
+                        "consigueme un consejo para la entrevista",
+                        "consigue un consejo",
+                        "un consejo porfavor",
+                        "dame un tip",
+                        "dame un tip de entrevista",
+                        "un tip"
+                    ]
+                },
+                {
+                    "name": "AMAZON.RepeatIntent",
+                    "samples": []
+                },
+                {
+                    "name": "EmpresaIntent",
+                    "slots": [],
+                    "samples": [
+                        "empresas disponibles",
+                        "empresas posibles",
+                        "empresas",
+                        "empresas porfavor",
+                        "porfavor dame las empresas",
+                        "empresas que conocez",
+                        "dime las empresas para las que tienes una pregunta",
+                        "dime las empresas para las que tienes preguntas de entrevista",
+                        "dime las empresas para las que tienes preguntas",
+                        "dime las empresas que tienes",
+                        "las empresas para las que tienes una preguntar",
+                        "las empresas para las que tienes preguntas de entrevistas",
+                        "las empresas para las que tienes preguntas",
+                        "empresas que tienes disponibles",
+                        "empresas que tienes",
+                        "para qué empresas tienes una pregunta",
+                        "para qué empresas tienes preguntas",
+                        "que empresas conoces",
+                        "para que empresas puedo realizar una pregunta",
+                        "para que empresas puedo hacer preguntas",
+                        "para que empresas puedo hacer una pregunta",
+                        "para que empresas puedo hacer preguntas",
+                        "que empresas puedo preguntar",
+                        "que empresas existen"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "NombreEmpresa",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "google"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "microsoft"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "amazon"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "TipoPregunta",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "personal"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "carrera"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "comportamiento"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "salario"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "tecnico"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "general"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
