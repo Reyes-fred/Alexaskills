@@ -241,10 +241,12 @@
                          "name": {
                                 "value": "bosch"
                             }
-                             "name": {
+                        },
+                        {     "name": {
                                 "value": "intel"
                             }
-                            "name": {
+                        },    
+                        {    "name": {
                                 "value": "google"
                             }
                         },
