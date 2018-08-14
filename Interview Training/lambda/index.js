@@ -318,7 +318,7 @@ var CARD_TITLE ="Interview Training"; // Be sure to change this for your skill.
 var RESPONSE_NO_QUESTIONS ="I don't have any questions like that.";
 var RESPONSE_NO_TIPS ="I don't have any tips like that.";
 var EXCLUDED_GENERAL_TAGS = ["technical", "amazon", "google", "microsoft", "intel", "bosch"]; // tags to be excluded from generic request
-var AMZN_APP_ID = "amzn1.ask.skill.2620fefd-1431-4a26-9dfb-4dee1071a888";
+var AMZN_APP_ID = "amzn1.ask.skill.";
 
 function getWelcomeResponse(callback) {
     var sessionAttributes = {},
