@@ -38,7 +38,7 @@ var questions = [
     { value : "¿Dónde te gustaría estar en tu carrera dentro de cinco años?", tags : ["carrera", "personal"] },
     { value : "¿Cuál es tu compañía ideal?", tags : ["personal", "carrera"] },
     { value : "¿Qué te atrajo de esta compañía?", tags : ["carrera", "personal"] },
-    { value : "Porque deberíamos contratarte?", tags : ["carrera personal"] },
+    { value : "Porque deberíamos contratarte?", tags : ["carrera", "personal"] },
     { value : "¿Qué es lo que menos te gustó de tu último trabajo?", tags : ["carrera", "personal"] },
     { value : "¿Cuándo estuvo más satisfecho en su trabajo?", tags : ["carrera", "personal"] },
     { value : "¿Qué puede hacer por nosotros que otros candidatos no pueden?", tags : ["personal"] },
@@ -277,7 +277,7 @@ function onIntent(intentRequest, session, callback) {
 
     var intent = intentRequest.intent,
         intentName = intentRequest.intent.name;
-
+   console.log("Tipo intent "+intentName)
     // dispatch custom intents to handlers here
     if ("PreguntaIntent" === intentName) {
         handleQuestionRequest(intent, session, callback);
@@ -321,8 +321,8 @@ var AMZN_APP_ID = "amzn1.ask.skill.";
 
 function getWelcomeResponse(callback) {
     var sessionAttributes = {},
-        speechOutput = "Puedes pedir una pregunta general o Puedes pedir una pregunta de un tema especifico para una empresa especifica"
-              + " si necesitas algo mas preciso",
+        speechOutput = "Puedes pedirme una pregunta en general o Puedes pedir una pregunta de un tema en especifico para una empresa en concreto"
+              + "",
         repromptText = "",
         shouldEndSession = false;
 
@@ -343,10 +343,12 @@ Get a random question from the list by filtering down by tags.
 */
 function getElement(tags, arr){
   var filteredElements;
-
+   console.log("tags: "+tags);
+   console.log("arr: "+arr);
   // only filter question list if specified
   if(typeof tags !== 'undefined' && tags !== null){
     filteredElements = getElementsByTags(tags, arr);
+	 
   }else{
     filteredElements = arr;
   }
@@ -354,6 +356,7 @@ function getElement(tags, arr){
   // if any questions exist, return random one
   if(filteredElements.length > 0){
     var randIndex = Math.floor(Math.random() * filteredElements.length);
+	 
     return filteredElements[randIndex];
   }else{
     return null;
@@ -469,17 +472,17 @@ function handleNumberOfQuestionsRequest(intent, session, callback) {
         companyName;
 
     // User specified type and company
-    if(intent.slots && intent.slots.QuestionType && intent.slots.QuestionType.value
-          && intent.slots.CompanyName && intent.slots.CompanyName.value){
-      numQuestions = getElementsByTags([intent.slots.QuestionType.value.toLowerCase(), intent.slots.CompanyName.value.toLowerCase()], questions).length;
-      companyName = intent.slots.CompanyName.value;
-      questionType = intent.slots.QuestionType.value;
-    }else if(intent.slots && intent.slots.QuestionType && intent.slots.QuestionType.value){ // User specified type
-      numQuestions = getElementsByTags([intent.slots.QuestionType.value.toLowerCase()], questions).length;
-      questionType = intent.slots.QuestionType.value;
-    }else if(intent.slots && intent.slots.CompanyName && intent.slots.CompanyName.value){ // User specified company
-      numQuestions = getElementsByTags([intent.slots.CompanyName.value.toLowerCase()], questions).length;
-      companyName = intent.slots.CompanyName.value;
+    if(intent.slots && intent.slots.TipoPregunta && intent.slots.TipoPregunta.value
+          && intent.slots.NombreEmpresa && intent.slots.NombreEmpresa.value){
+      numQuestions = getElementsByTags([intent.slots.TipoPregunta.value.toLowerCase(), intent.slots.NombreEmpresa.value.toLowerCase()], questions).length;
+      companyName = intent.slots.NombreEmpresa.value;
+      questionType = intent.slots.TipoPregunta.value;
+    }else if(intent.slots && intent.slots.TipoPregunta && intent.slots.TipoPregunta.value){ // User specified type
+      numQuestions = getElementsByTags([intent.slots.TipoPregunta.value.toLowerCase()], questions).length;
+      questionType = intent.slots.TipoPregunta.value;
+    }else if(intent.slots && intent.slots.NombreEmpresa && intent.slots.NombreEmpresa.value){ // User specified company
+      numQuestions = getElementsByTags([intent.slots.NombreEmpresa.value.toLowerCase()], questions).length;
+      companyName = intent.slots.NombreEmpresa.value;
     }else{ // if user asked a simple question
       numQuestions = getExcludedElementsByTags(EXCLUDED_GENERAL_TAGS, questions).length;
     }
@@ -516,15 +519,17 @@ function handleQuestionRequest(intent, session, callback) {
         speechOutput,
         repromptText,
         question;
-
+    
+    console.log("company: "+intent.slots.NombreEmpresa)
+    console.log("question: "+intent.slots.TipoPregunta)
     // User specified type and company
-    if(intent.slots && intent.slots.QuestionType && intent.slots.QuestionType.value
-          && intent.slots.CompanyName && intent.slots.CompanyName.value){
-      question = getElement([intent.slots.QuestionType.value.toLowerCase(), intent.slots.CompanyName.value.toLowerCase()], questions);
-    }else if(intent.slots && intent.slots.QuestionType && intent.slots.QuestionType.value){ // User specified type
-      question = getElement([intent.slots.QuestionType.value.toLowerCase()], questions);
-    }else if(intent.slots && intent.slots.CompanyName && intent.slots.CompanyName.value){ // User specified company
-      question = getElement([intent.slots.CompanyName.value.toLowerCase()], questions);
+    if(intent.slots && intent.slots.TipoPregunta && intent.slots.TipoPregunta.value
+          && intent.slots.NombreEmpresa && intent.slots.NombreEmpresa.value){
+      question = getElement([intent.slots.TipoPregunta.value.toLowerCase(), intent.slots.NombreEmpresa.value.toLowerCase()], questions);
+    }else if(intent.slots && intent.slots.TipoPregunta && intent.slots.TipoPregunta.value){ // User specified type
+      question = getElement([intent.slots.TipoPregunta.value.toLowerCase()], questions);
+    }else if(intent.slots && intent.slots.NombreEmpresa && intent.slots.NombreEmpresa.value){ // User specified company
+      question = getElement([intent.slots.NombreEmpresa.value.toLowerCase()], questions);
     }else{ // if user asked a simple question
       question = getElement([], getExcludedElementsByTags(EXCLUDED_GENERAL_TAGS, questions));
     }
@@ -561,7 +566,7 @@ function handleTipsRequest(intent, session, callback) {
 
 function handleQuestionTypeRequest(intent, session, callback) {
     var sessionAttributes = {},
-        speechOutput = "Puedes preguntar por " + getArrayString(questionTypes, "and") + " . Sino especificas el tipo, tomaré una al azar",
+        speechOutput = "Puedes preguntar por " + getArrayString(questionTypes, "y") + " . Sino especificas el tipo, tomaré una al azar",
         repromptText = speechOutput;
 
         sessionAttributes = {
@@ -575,7 +580,7 @@ function handleQuestionTypeRequest(intent, session, callback) {
 
 function handleCompanyRequest(intent, session, callback) {
     var sessionAttributes = {},
-        speechOutput = "Puedes preguntar por " + getArrayString(companies, "or") + ". "
+        speechOutput = "Puedes preguntar por " + getArrayString(companies, "o") + ". "
             + "Sino especificas la empresa, tomaré una al azar",
         repromptText = speechOutput;
 
@@ -613,9 +618,9 @@ function handleGetHelpRequest(intent, session, callback) {
 
     // Do not edit the help dialogue. This has been created by the Alexa team to demonstrate best practices.
 
-    var speechOutput ="Puedes decir, 'Pregunta a entrevista laboral por una pregunta.' "
-            + "Tambien puedes especificar el tipo de pregunta, o una pregunta "
-            + "para una empresa especifica, como, 'Pregunta a entrevista laboral por una pregunta de tipo tecnica de amazon'",
+    var speechOutput ="Puedes decir, 'Pregunta a entrevista de trabajo por ayuda.' "
+            + "Tambien puedes especificar el tipo de pregunta que deseas, o una pregunta "
+            + "para una empresa especifica, como, 'Pregunta a entrevista de trabajo por una pregunta de tipo tecnico de amazon'",
         repromptText = speechOutput,
         shouldEndSession = false;
 
