@@ -1,0 +1,853 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "pueblos magicos",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "numberMagicTownMexico",
+                    "slots": [],
+                    "samples": [
+                        "numero de pueblos mágicos en el país",
+                        "cuantos pueblos mágicos hay en México",
+                        "pueblos mágicos en México",
+                        "cuantos pueblos mágicos existen en la república",
+                        "cantidad de pueblos mágicos en México"
+                    ]
+                },
+                {
+                    "name": "numberMagicTownState",
+                    "slots": [
+                        {
+                            "name": "estados",
+                            "type": "estados"
+                        }
+                    ],
+                    "samples": [
+                        "cuantos pueblos mágicos hay en {estados}",
+                        "cuantos pueblos mágicos hay en el estado de {estados}",
+                        "numero de pueblos mágicos en {estados}",
+                        "en {estados} cuantos pueblos mágicos hay",
+                        "en {estados} cuantos pueblos mágicos existen",
+                        "dime el número de pueblos mágicos de {estados}"
+                    ]
+                },
+                {
+                    "name": "nameMagicTownState",
+                    "slots": [
+                        {
+                            "name": "estados",
+                            "type": "estados"
+                        }
+                    ],
+                    "samples": [
+                        "dime los pueblos mágicos de {estados}",
+                        "enlista los pueblos mágicos de {estados}",
+                        "cuáles son los pueblos mágicos de {estados}",
+                        "cuáles son los pueblos mágicos en {estados}",
+                        "pueblos mágicos de {estados}",
+                        "en {estados} que pueblos mágicos existen",
+                        "en {estados} que pueblos mágicos hay"
+                    ]
+                },
+                {
+                    "name": "magicTownRandom",
+                    "slots": [],
+                    "samples": [
+                        "dime un pueblo mágico",
+                        "quiero conocer un pueblo mágico",
+                        "por favor dame un pueblo mágico",
+                        "información de un pueblo mágico",
+                        "un pueblo mágico al azar",
+                        "un pueblo mágico"
+                    ]
+                },
+                {
+                    "name": "magicTownSpecific",
+                    "slots": [
+                        {
+                            "name": "puebloMagico",
+                            "type": "puebloMagico"
+                        }
+                    ],
+                    "samples": [
+                        "que puedo ver en {puebloMagico}",
+                        "dime más sobre {puebloMagico}",
+                        "quiero saber sobre {puebloMagico}",
+                        "más información sobre {puebloMagico}",
+                        "dime más sobre {puebloMagico}",
+                        "dame información sobre {puebloMagico}",
+                        "en {puebloMagico} que puedo visitar"
+                    ]
+                },
+                {
+                    "name": "AMAZON.MoreIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateSettingsIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NextIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PageUpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PageDownIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PreviousIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollRightIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollDownIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollLeftIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollUpIntent",
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "estados",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Zacatecas"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Yucatán"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Veracruz"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tlaxcala"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tamaulipas"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tabasco"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Sonora"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Sinaloa"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "San Luis Potosí"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Quintana Roo"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Querétaro"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Puebla"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Oaxaca"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Nuevo León"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Nayarit"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Morelos"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Michoacán"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Jalisco"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Hidalgo"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Guerrero"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Guanajuato"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Durango"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Colima"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Coahuila"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Chihuahua"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ciudad de México"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Chiapas"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Baja California Sur"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Baja California"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Aguascalientes"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "puebloMagico",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Teúl de González Ortega"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Sombrerete"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Pinos"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Nochistlán de Mejía"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Jeréz de García Salinas"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Valladolid"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Izamal"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Orizaba"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Coscomatepec"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Xico"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Papantla"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Coatepec"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tlaxco"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Huamantla"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tula"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mier"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tapijulapa"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Magdalena de Kino"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Álamo"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mocorito"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "El fuerte"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "El rosario"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cosalá"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Xilitla"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Real de Catorce"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tulum"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Isla Mujeres"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Bacalar"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "San Joaquín"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tequisquiapan"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Jalpan de Serra"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cadereyta de Montes"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Bernal"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Huauchinango"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Atlixco"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Zacatlán"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Xicotepec"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tlatlaquitepec"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "San Pedro Cholula"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Pahuatlán"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cuetzalan"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Chignahuapan"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "San Pedro y San Pablo Teposcolula"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "San Pablo Villa Mitla"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mazunte"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Huautla de Jiménez"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Capulálpam de Méndez"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Linares"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Santiago"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Sayulita"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Jala"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tlayacapan"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tepoztlan"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tzintzuntzan"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tlalpajahua"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tacambaro"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Santa Clara del Cobre"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Patzcuaro"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mineral de Angangueo"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Jiquilpan de Juarez"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cuitzeo del Porvenir"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Villa del Carbon"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "San Martin de las Piramides"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ixtapan de la Sal"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Aculco"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Valle de Bravo"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tepotzotlán"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Metepec"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Malinalco"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "El oro de Hidalgo"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Talpa de Allende"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mascota"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tequila"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tapalpa"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "San Sebastian del Oeste"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mazamitla"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lagos de Moreno"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tecozautla"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Real de Monte"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mineral del Chico"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Huichapan"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Huasca de Ocampo"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Taxco"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Yuriria"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Salvatierra"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mineral de Pozos"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Jalpa de Canovas"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Dolores Hidalgo"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mapimi"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Casas Grandes"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Creel"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Batopilas"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Palenque"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "San Cristobal de las Casas"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Comitan de Dominguez"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Chiapa de Corzo"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Comala"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Guerrero"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Candela"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Viesca"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Parras de la Fuente"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cuatro Cienegas"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Arteaga"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Palizada"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Todos Santos"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Loreto"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tecate"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "San José de Gracia"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Real de Asientos"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Calvillo"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
