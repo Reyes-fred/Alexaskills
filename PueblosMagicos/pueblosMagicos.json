@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "pueblos magicos",
+            "invocationName": "pueblos mágicos",
             "intents": [
                 {
                     "name": "AMAZON.CancelIntent",
@@ -19,11 +19,22 @@
                     "name": "numberMagicTownMexico",
                     "slots": [],
                     "samples": [
-                        "numero de pueblos mágicos en el país",
-                        "cuantos pueblos mágicos hay en México",
+                        "número  de pueblos mágicos en el país",
+                        "cuantos pueblos mágicos hay en la republica mexicana",
                         "pueblos mágicos en México",
                         "cuantos pueblos mágicos existen en la república",
-                        "cantidad de pueblos mágicos en México"
+                        "cantidad de pueblos mágicos en México",
+						"en méxico cuantos pueblos mágicos existen",
+						"dime el número  de pueblos mágicos en todo méxico",
+						"en la republica mexicana cuantos pueblos mágicos existen",
+						"quiero saber el número  de pueblos mágicos en méxico",
+						"la cantidad de pueblos mágicos en méxico",
+						"la cantidad de pueblos mágicos en la república",
+						"la cantidad de pueblos mágicos en la república mexicana",
+						"el número de pueblos mágicos en méxico",
+						"el número en la republica mexicana de pueblos mágicos",
+						"el número en méxico de pueblos mágicos",
+						"el número de pueblos mágicos en la republica mexicana"
                     ]
                 },
                 {
@@ -37,10 +48,19 @@
                     "samples": [
                         "cuantos pueblos mágicos hay en {estados}",
                         "cuantos pueblos mágicos hay en el estado de {estados}",
-                        "numero de pueblos mágicos en {estados}",
+                        "número de pueblos mágicos en {estados}",
                         "en {estados} cuantos pueblos mágicos hay",
                         "en {estados} cuantos pueblos mágicos existen",
-                        "dime el número de pueblos mágicos de {estados}"
+                        "dime el número de pueblos mágicos de {estados}",
+						"en el estado de {estados} cuantos pueblos mágicos existen",
+						"en el estado de {estados} cuantos pueblos mágicos hay",
+						"en el estado de {estados} cuantos pueblos mágicos tienen",
+						"cuantos pueblos mágicos tiene el estado de {estados}",
+						"cuantos pueblos mágicos tiene {estados}",
+						"el número de pueblos mágicos en {estados}",
+						"el número de pueblos mágicos en el estado de {estados}",
+						"el número de pueblos mágicos en el estado de {estados}",
+						"en {estados} cuantos pueblos mágicos tiene"
                     ]
                 },
                 {
@@ -58,7 +78,17 @@
                         "cuáles son los pueblos mágicos en {estados}",
                         "pueblos mágicos de {estados}",
                         "en {estados} que pueblos mágicos existen",
-                        "en {estados} que pueblos mágicos hay"
+                        "en {estados} que pueblos mágicos hay",
+						"en el estado de {estados} que pueblos mágicos existen",
+						"dime los nombre de los pueblos magicos en {estados}",
+						"dime los nombre de los pueblos magicos en el estado {estados}",
+						"cuáles son los pueblos mágicos en el estado de {estados}",
+						"nombre de los pueblos mágicos en {estados}",
+						"nombre de los pueblos mágicos en el estado {estados}",
+						"dime los pueblos mágicos en el estado {estados}",
+						"en {estados} dime sus pueblos mágicos",
+						"los pueblos mágicos de {estados}",
+						"los pueblos mágicos de {estados}"
                     ]
                 },
                 {
@@ -70,7 +100,16 @@
                         "por favor dame un pueblo mágico",
                         "información de un pueblo mágico",
                         "un pueblo mágico al azar",
-                        "un pueblo mágico"
+                        "un pueblo mágico",
+						"información de un pueblo mágico de méxico",
+						"descripción de algun pueblo mágico",
+						"cuentame sobre un pueblo mágico",
+						"dime sobre algun pueblo mágico",
+						"quiero saber sobre un pueblo mágico",
+						"al azar cuenta sobre un pueblo mágico",
+						"me gustaria conocer sobre un pueblo mágico",
+						"mencioname algo sobre un pueblo mágico",
+						"cuentame sobre un pueblo mágico al azar"
                     ]
                 },
                 {
@@ -86,9 +125,19 @@
                         "dime más sobre {puebloMagico}",
                         "quiero saber sobre {puebloMagico}",
                         "más información sobre {puebloMagico}",
-                        "dime más sobre {puebloMagico}",
                         "dame información sobre {puebloMagico}",
-                        "en {puebloMagico} que puedo visitar"
+                        "en {puebloMagico} que puedo visitar",
+						"que me recomiendas ver en {puebloMagico}",
+						"cuentame sobre {puebloMagico}"
+						"describeme {puebloMagico}"
+						"describeme sobre el pueblo de {puebloMagico}",
+						"cuentame de {puebloMagico}",
+						"cuentame del pueblo mágico de {puebloMagico}",
+						"en el pueblo mágico de {puebloMagico} que puedo visitar",
+						"en {puebloMagico} que puedo visitar",
+						"en el pueblo magico de {puebloMagico} que puedo conocer",
+						"que puedo conocer en {puebloMagico}",
+						"comparteme información sobre {puebloMagico}"
                     ]
                 },
                 {
