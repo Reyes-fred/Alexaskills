@@ -1,0 +1,53 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "de donde llaman",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "conocerprefijo",
+                    "slots": [
+                        {
+                            "name": "Item",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "que estado pertenece el prefijo {Item}",
+                        "que estado pertenece el código {Item}",
+                        "el código {Item} de que estado es",
+                        "el código {Item} de que ciudad es",
+                        "cúal es la ciudad con código {Item}",
+                        "dame la información del código {Item}",
+                        "investiga el codigo {Item}",
+                        "busca el codigo {Item}",
+                        "investiga el prefijo {Item}",
+                        "dame la información del prefijo {Item}",
+                        "dame el estado del prefijo {Item}",
+                        "el prefijo {Item} de donde es",
+                        "dime la localidad del prefijo {Item} ",
+                        "busca el prefijo {Item}",
+                        "de donde es el número {Item}",
+                        "busca {Item}"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
+}
