@@ -1,0 +1,109 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "animalandia",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "terminar",
+                        "termina",
+                        "adios",
+                        "cancelar",
+                        "salir"
+                    ]
+                },
+                {
+                    "name": "AnimalSoundIntent",
+                    "slots": [
+                        {
+                            "name": "animal",
+                            "type": "animals"
+                        }
+                    ],
+                    "samples": [
+                        "el {animal} como hace",
+                        "sonido del {animal}",
+                        "quiero saber como hace el {animal}",
+                        "dime como hace {animal}",
+                        "cual es el sonido del {animal}",
+                        "como hace el {animal}",
+                        "{animal}",
+                        "sonido de {animal}",
+                        "como hace un {animal} ",
+                        "el sonido de un {animal} "
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "animals",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "pato"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pollo"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "lobo"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "gallo"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "rana"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "oveja"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "cochino"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "gato"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "perro"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "vaca"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
