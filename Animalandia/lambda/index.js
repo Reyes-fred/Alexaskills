@@ -3,6 +3,12 @@
 
 const Alexa = require('ask-sdk-core');
 
+function supportsAPL(handlerInput) {
+    const supportedInterfaces = handlerInput.requestEnvelope.context.System.device.supportedInterfaces;
+    const aplInterface = supportedInterfaces['Alexa.Presentation.APL'];
+    return aplInterface != null && aplInterface != undefined;
+}
+
 const LaunchRequestHandler = {
   canHandle(handlerInput) {
     return handlerInput.requestEnvelope.request.type === 'LaunchRequest';
@@ -38,25 +44,47 @@ const AnimalSoundIntentHandler = {
     };
 
     const requestedAnimal = handlerInput.requestEnvelope.request.intent.slots.animal.value;
+    if(animalData.includes(requestedAnimal)){
+      
     const requestedAnimalSound = animalData[requestedAnimal].sound;
     const requestedAnimalImage = animalData[requestedAnimal].image;
 
     const speechText = `${requestedAnimal.charAt(0).toUpperCase()}${requestedAnimal.slice(1)} dice ${requestedAnimalSound}!`;
 
-    return handlerInput.responseBuilder
-      .speak(speechText)
-      .addDirective({
-        type: 'Alexa.Presentation.APL.RenderDocument',
-        version: '1.0',
-        document: require('./aplDocuments/animalSound.json'),
-        datasources: {
-          'animalSoundData': {
-            'message': speechText,
-            'image': requestedAnimalImage
+if(supportsAPL(handlerInput))
+    {
+      return handlerInput.responseBuilder
+        .speak(speechText)
+        .addDirective({
+          type: 'Alexa.Presentation.APL.RenderDocument',
+          version: '1.0',
+          document: require('./aplDocuments/animalSound.json'),
+          datasources: {
+            'animalSoundData': {
+              'message': speechText,
+              'image': requestedAnimalImage
+            }
           }
-        }
-      })
+        })
+        .getResponse();
+    }
+    else{
+      return handlerInput.responseBuilder
+      .speak(speechText)
+      .reprompt(speechText)
+      .withSimpleCard('Sonido Animales', speechText)
       .getResponse();
+    }
+    }
+    else{
+      const speechText = "Perdona ese animal, no lo se, porfavor intenta con otro."
+       return handlerInput.responseBuilder
+      .speak(speechText)
+      .reprompt(speechText)
+      .withSimpleCard('Sonido Animales', speechText)
+      .getResponse();
+      
+    }
   },
 };
 
@@ -66,7 +94,7 @@ const HelpIntentHandler = {
       && handlerInput.requestEnvelope.request.intent.name === 'AMAZON.HelpIntent';
   },
   handle(handlerInput) {
-    const speechText = 'Este skill te puede ayudar a saber como hacen los animales, por ejemplo, ¿como hacen el perro?';
+    const speechText = 'Este skill te puede ayudar a saber como hacen los animales, por ejemplo, ¿como hace el perro?, ¿qué animal quieres escuchar?';
 
     return handlerInput.responseBuilder
       .speak(speechText)
