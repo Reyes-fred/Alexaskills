@@ -43,13 +43,14 @@ const AnimalSoundIntentHandler = {
       cochino: {sound: 'oink oink', image: 'https://image.freepik.com/free-vector/cute-little-pig-sitting-white-background-illustration_1262-16818.jpg'}
     };
 
-    const requestedAnimal = handlerInput.requestEnvelope.request.intent.slots.animal.value;
-    if(animalData.includes(requestedAnimal)){
-      
-    const requestedAnimalSound = animalData[requestedAnimal].sound;
-    const requestedAnimalImage = animalData[requestedAnimal].image;
+   
+   let requestedAnimal = handlerInput.requestEnvelope.request.intent.slots.animal.value;
+   
+    if(animalData.hasOwnProperty(requestedAnimal)){
+    let requestedAnimalSound = animalData[requestedAnimal].sound;
+    let requestedAnimalImage = animalData[requestedAnimal].image;
 
-    const speechText = `${requestedAnimal.charAt(0).toUpperCase()}${requestedAnimal.slice(1)} dice ${requestedAnimalSound}!`;
+    let speechText = `${requestedAnimal.charAt(0).toUpperCase()}${requestedAnimal.slice(1)} dice ${requestedAnimalSound}!`;
 
 if(supportsAPL(handlerInput))
     {
@@ -77,7 +78,7 @@ if(supportsAPL(handlerInput))
     }
     }
     else{
-      const speechText = "Perdona ese animal, no lo se, porfavor intenta con otro."
+      let speechText = "Perdona ese animal, no lo se, porfavor intenta con otro."
        return handlerInput.responseBuilder
       .speak(speechText)
       .reprompt(speechText)
