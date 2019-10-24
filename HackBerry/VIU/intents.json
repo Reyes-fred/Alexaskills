@@ -1,1 +1,124 @@
-
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "mi pokedex",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": [
+                        "cierra",
+                        "bye",
+                        "hasta luego",
+                        "adios"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "tipopokemon",
+                    "slots": [
+                        {
+                            "name": "tipo",
+                            "type": "tipo"
+                        }
+                    ],
+                    "samples": [
+                        "dime los pokemons de tipo {tipo}",
+                        "dime los pokemones de tipo {tipo}",
+                        "quiero saber los pokemones de tipo {tipo}",
+                        "dame los tipo {tipo}",
+                        "cuales son los pokemones de tipo {tipo}",
+                        "pokemos de {tipo}",
+                        "nombrame los pokemones de tipo {tipo}",
+                        "dime los pokemon de tipo {tipo}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "pokemonespecifico",
+                    "slots": [
+                        {
+                            "name": "pokemon",
+                            "type": "pokemon"
+                        }
+                    ],
+                    "samples": [
+                        "habilidades de {pokemon}",
+                        "información de {pokemon}",
+                        "que poderes tiene {pokemon}",
+                        "quien es {pokemon}",
+                        "quiero saber de {pokemon}",
+                        "cuentame sobre {pokemon}",
+                        "dime sobre {pokemon}"
+                    ]
+                },
+                {
+                    "name": "categoriaspokemon",
+                    "slots": [],
+                    "samples": [
+                        "dime los tipos de pokemons",
+                        "quiero saber los tipos de pokemons",
+                        "tipos de pokemones",
+                        "tipo de pokemon",
+                        "tipos de pokemons",
+                        "menciona las categoria de pokemon",
+                        "cuales son los tipos de pokemon ",
+                        "que categorias existen",
+                        "que tipos de pokemon existen"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "tipo",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Electrico"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Agua"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Fuego"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "pokemon",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Charmander"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pikachu"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "bulbasaur"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
