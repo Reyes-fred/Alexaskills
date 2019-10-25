@@ -30,7 +30,7 @@
                     ],
                     "samples": [
                         "dime los pokemons de tipo {tipo}",
-                        "dime los pokemones de tipo {tipo}",
+                        "dime sobre los pokemones de tipo {tipo}",
                         "quiero saber los pokemones de tipo {tipo}",
                         "dame los tipo {tipo}",
                         "cuales son los pokemones de tipo {tipo}",
@@ -68,8 +68,8 @@
                         "dime los tipos de pokemons",
                         "quiero saber los tipos de pokemons",
                         "tipos de pokemones",
-                        "tipo de pokemon",
-                        "tipos de pokemons",
+                        "tipo de los pokemon",
+                        "menciona cuales son los tipos de pokemons",
                         "menciona las categoria de pokemon",
                         "cuales son los tipos de pokemon ",
                         "que categorias existen",
@@ -103,7 +103,7 @@
                     "values": [
                         {
                             "name": {
-                                "value": "Charmander"
+                                "value": "charmander"
                             }
                         },
                         {
