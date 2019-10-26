@@ -1,0 +1,100 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "curso bosch",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "presentate",
+                    "slots": [],
+                    "samples": [
+                        "quieren conocerte",
+                        "introducete",
+                        "presentate ante tu publico",
+                        "presentate",
+                        "quien eres",
+                        "dinos quien eres"
+                    ]
+                },
+                {
+                    "name": "funcionalidades",
+                    "slots": [],
+                    "samples": [
+                        "cuales son las ventajas de tenerte",
+                        "como me puedes ayudar",
+                        "dime como seria mi vida contigo",
+                        "como podrias mejorar mi vida",
+                        "de que forma mejoras mi vida",
+                        "como me podrias ayudar",
+                        "que puedes hacer por mi"
+                    ]
+                },
+                {
+                    "name": "habilidades",
+                    "slots": [],
+                    "samples": [
+                        "que skills puedes tener",
+                        "tienes habilidades extras",
+                        "que tipo de skills podemos encontrar",
+                        "cuentame sobre las skills",
+                        "que tipo de skills tienes ",
+                        "habilidades que tengas",
+                        "que skills tienes"
+                    ]
+                },
+                {
+                    "name": "comofunciona",
+                    "slots": [],
+                    "samples": [
+                        "de que forma estas construida",
+                        "como estas conformada",
+                        "quiero saber como puedo interactuar contigo",
+                        "me puedes explicar un poco de ti",
+                        "como es trabajar contigo",
+                        "como funcionas"
+                    ]
+                },
+                {
+                    "name": "devices",
+                    "slots": [],
+                    "samples": [
+                        "como puedo interactuar contigo",
+                        "como puedo jugar contigo",
+                        "en que dispositivos puedo interactuar contigo",
+                        "donde puedo escucharte",
+                        "en donde estas disponible",
+                        "como puedo encontrarte",
+                        "en donde puedo encontrarte"
+                    ]
+                },
+                {
+                    "name": "alexaagricultura",
+                    "slots": [],
+                    "samples": [
+                        "puedes ayudarnos en este evento",
+                        "podrias darnos una idea de como trabajar contigo",
+                        "puedes ayudarnos en este reto",
+                        "como podrias ayudarnos en este reto",
+                        "alguna idea como nos podrias ayudar"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
+}
